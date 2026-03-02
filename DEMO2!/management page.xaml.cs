@@ -92,7 +92,7 @@ namespace DEMO2_
             }
             else
             {
-                MessageBox.Show("please select item from data to update");
+                MessageBox.Show("please select item from data to update row");
             }
             datagrid_cs.ItemsSource=db.Tasks.ToList();
         }
