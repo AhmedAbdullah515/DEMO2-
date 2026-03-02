@@ -1,0 +1,56 @@
+﻿<Page x:Class="DEMO2_.management_page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DEMO2_"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="management_page">
+
+    <Grid Background="white" Margin="0,0,0,-171">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Label Content="user management page" FontSize="30" BorderThickness="5" BorderBrush="Black" Width="797"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <TextBlock Text="     task id"  FontSize="30" Width="162" Height="43"/>
+            <TextBox Height="63" Width="100" Name="taskbox"/>
+            <TextBlock Text="status" FontSize="30" Height="49" Margin="100,0,0,20"/>
+            <ComboBox Margin="30,0,0,0" Height="61" Width="100" Name="combotextbox">
+                <ComboBoxItem Content="Completed"/>
+                <ComboBoxItem Content="Pending"/>
+                <ComboBoxItem Content="In Progress"/>
+            </ComboBox>
+
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,117,0,10" Grid.RowSpan="2">
+            <TextBlock Text="title" FontSize="30" Margin="40,20,0,0"/>
+            <TextBox Height="60" Width="100" Margin="20,0,20,20" Name="titlebox"/>
+            <TextBlock Text="employee name" FontSize="30" Margin="100,20,0,0"/>
+            <TextBox Height="60" Width="150" Margin="20,0,0,0" Name="empbox"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <TextBlock Text="description" FontSize="30" Margin="20,25,0,0"/>
+            <TextBox Height="60" Width="100" Margin="20,0,0,0" Name="desbox"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal">
+            <Button Content="ADD" Margin="100,0,0,0" Height="60" Width="80" FontSize="30" Click="Button_Click"/>
+            <Button Content="EDIT" Margin="200,0,0,0" Height="60" Width="80" FontSize="30" Click="Button_Click_1"/>
+            <Button Content="DELETE" Height="60" Width="150" Margin="180,0,0,0" FontSize="30" Click="Button_Click_2"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="5">
+            <DataGrid Height="139" Name="datagrid_cs"/>
+        </StackPanel>
+    </Grid>
+</Page>
